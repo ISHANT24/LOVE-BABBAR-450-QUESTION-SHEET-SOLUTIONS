@@ -1,0 +1,16 @@
+1) The main motive of this question is not to find critical  floor (f) but to decide floors from which egs should be dropped so that the total no of trials are minimised.
+
+2) If we drop egg from floor x there can be 2 cases-
+
+  Case 1- Egg breaks - if egg breaks after drooping from xth floor then we need to check below x floor as some floor should exist lower than x 
+                        in which egg would not break so problem is now reduces to x-1 floors (as we have to find floors less than x lie x= 4 so 
+                        x-1(4-1) = 3 now we have to check for 3 floors ) and n-1 eggs (as we have already broken one egg to find x floor so total eggs-1)eggs remaining.
+  
+  Case 2 - Egg does not breaks -   if egg does not break at x floor so now we check floor higher than xth floor so problem reduces to k-x(as if k = 10 and x  = 5 so 10-5 now we have check 5 floors)   floors and n eggs(as no egg is broken yet.) 
+  
+3) eggFloor[i][j] is a 2d table which  will represent minimum number of trials needed for i eggs and j floors.
+      i = eggs and j = floors
+4) We need one trial for one floor as if there is only 1 floor we only try for that floor so put value 1 
+    and 0 trials for 0 floors as there is 0 floor no trials required
+    
+5)     
